@@ -1,0 +1,26 @@
+body {
+  background-color: #222222;
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+}
+h1 {
+  color: #639FAB;
+}
+
+#container {
+  padding-top: 18%;
+  width: 50%;
+  /* Set the margin-left and margin-right automatically set */
+  margin: 0 auto;
+}
+footer {
+  display: block;
+  position:fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 10px;
+}
+a {
+  color: #1C5D99;
+  text-decoration: none;
+}
