@@ -29,12 +29,16 @@ server.route({
     }
 });
 
-server.register(require('inert'), (err) => {
+server.register(require('inert'), function(err) {
+  if (err) {throw err;}
   server.route({
-    method: 'GET',
-    path: '/css/styles.css',
-    handler: function (request, reply) {
-        reply.file('./templates/css/styles.css');
+    method : 'GET', path : '/public/{path*}',
+    handler : {
+      directory : {
+        path : './public',
+        listing : false,
+        index : false
+      }
     }
   });
 });
